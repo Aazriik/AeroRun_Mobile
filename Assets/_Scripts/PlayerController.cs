@@ -4,8 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] float moveSpeed = 2.0f;
-    
+    [SerializeField] float moveSpeed = 2.0f;    
 
     #endregion
 
