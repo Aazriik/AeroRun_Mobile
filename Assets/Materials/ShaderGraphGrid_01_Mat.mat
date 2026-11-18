@@ -108,6 +108,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
     - Color_2B671050: {r: 0.23202202, g: 0.6245157, b: 0.745283, a: 0}
