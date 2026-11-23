@@ -27,7 +27,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "Previous",
+                    "name": "Invincible",
                     "type": "Button",
                     "id": "bae41480-c28e-4870-8f43-0ae120472bc4",
                     "expectedControlType": "",
@@ -37,9 +37,19 @@
                     "priority": 0
                 },
                 {
-                    "name": "Next",
+                    "name": "Boost",
                     "type": "Button",
                     "id": "562aed4a-84c7-4751-9d89-a1905b2dd928",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "dbbf5791-9d81-4c61-acf7-d6dc3f23af7d",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -193,100 +203,78 @@
                 },
                 {
                     "name": "",
-                    "id": "7db1bf66-8ccf-43c5-84f2-43e07132bed2",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9f024ff4-6895-4f2f-9b91-854aea48f331",
-                    "path": "<Touchscreen>/primaryTouch/tap",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Touch",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c2e2d69a-2d85-4139-9842-30bc0f163e28",
-                    "path": "<Joystick>/trigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Joystick",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ed2b5494-0b57-4768-b8de-a2b011eba43a",
-                    "path": "<XRController>/{PrimaryAction}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "XR",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "42505328-03d1-437e-81cb-0741e3f76b4a",
-                    "path": "<Keyboard>/enter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a37d6116-6c2b-45e8-886d-8821361be750",
-                    "path": "<Keyboard>/2",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Next",
+                    "action": "Boost",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "bae8991e-abee-46b2-a820-525dbd67780e",
-                    "path": "<Gamepad>/dpad/right",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Next",
+                    "action": "Boost",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "668836ff-232d-4dc7-9216-5c9fac9efee6",
-                    "path": "<Keyboard>/1",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Previous",
+                    "action": "Invincible",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "5971a383-1834-4952-81eb-e913c1100de1",
-                    "path": "<Gamepad>/dpad/left",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Previous",
+                    "action": "Invincible",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "29096a70-f3c3-48cc-9228-00a9ae149f55",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4567d40c-d6e3-44a3-8ec3-3e91ced05417",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b4e15cc0-0493-4a63-8692-cf6d77f9a177",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

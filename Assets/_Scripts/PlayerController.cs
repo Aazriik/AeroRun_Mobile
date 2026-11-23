@@ -4,14 +4,16 @@ using DG.Tweening;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour, PlayerControls.IPlayerActions
+public class PlayerController : MonoBehaviour // PlayerControls.IPlayerActions
 {
     #region Variables
 
     [Header("References")]
     private Rigidbody rb;
+    private Vector2 moveInput;
 
-    PlayerControls input;
+    #region Extra
+    //PlayerControls input;
 
     [Header("Movement")]
     private Vector3 playerVelocity;
@@ -32,20 +34,21 @@ public class PlayerController : MonoBehaviour, PlayerControls.IPlayerActions
     // Menu References.
     // public GameObject pauseMenu;
     // bool isPaused = false;
+    #endregion
 
     #endregion
 
     #region Enable/Disable Action Maps
     private void OnEnable()
     {
-        input.Enable();
-        input.Player.AddCallbacks(this);
+        // input.Enable();
+        // input.Player.AddCallbacks(this);
     }
 
     private void OnDisable()
     {
-        input.Player.RemoveCallbacks(this);
-        input.Disable();
+        // input.Player.RemoveCallbacks(this);
+        // input.Disable();
     }
 
     #endregion
@@ -66,13 +69,13 @@ public class PlayerController : MonoBehaviour, PlayerControls.IPlayerActions
 
     protected void FixedUpdate()
     {
-        
+        rb.linearVelocity = new Vector3(moveInput.x * playerSpeed, moveInput.y * playerSpeed, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed, Space.World);
+        
     }
 
     #endregion
@@ -82,20 +85,29 @@ public class PlayerController : MonoBehaviour, PlayerControls.IPlayerActions
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        moveInput = context.ReadValue<Vector2>();
     }
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        if (context.performed)
+        {
+            rb.AddForce(new Vector3(0, 100f, 0));
+        }
+        
     }
 
-    public void OnPrevious(InputAction.CallbackContext context)
+    public void OnInvincible(InputAction.CallbackContext context)
     {
         throw new System.NotImplementedException();
     }
 
-    public void OnNext(InputAction.CallbackContext context)
+    public void OnBoost(InputAction.CallbackContext context)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
     {
         throw new System.NotImplementedException();
     }
