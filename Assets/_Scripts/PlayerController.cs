@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour // PlayerControls.IPlayerActions
     protected void FixedUpdate()
     {
         rb.linearVelocity = new Vector3(moveInput.x * playerSpeed, moveInput.y * playerSpeed, 0f);
+        // rb.MovePosition(Vector3 moveInput.x * playerSpeed, moveInput.y * playerSpeed, 0f);
     }
 
     // Update is called once per frame
